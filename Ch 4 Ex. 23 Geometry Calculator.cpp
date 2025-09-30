@@ -12,15 +12,48 @@ int main()
 {
 	int choice;
 
-	{
 		cout << "Geometry Calculator" << endl;
 		cout << setw(36) << "1. Calculate the Area of a Circle" << endl;
 		cout << setw(39) << "2. Calculate the Area of a Rectangle" << endl;
 		cout << setw (38) << "3. Calculate the Area of a Triangle" << endl;
 		cout << setw (10) << "4. Quit" << endl;
 		cout << setw(26) << "Enter you choice (1-4):" << endl;
-	}
+		cin >> choice;
+	
+	switch (choice)
+	{
+		case 1: cout << "What's the radius of the circle? ";
+			double radius, areac;
+			cin >> radius;
+			areac = 3.14159 * (pow(radius, 2.0));
+			cout << "The radius of the circle is " << areac;
+			break;
 
+		case 2: cout << "What's the length of the rectangle? ";
+			double length, width, arear;
+			cin >> length;
+			cout << "What's the width of the rectangle? ";
+			cin >> width;
+			arear = length * width;
+			cout << "The area of the rectangle is " << arear;
+			break;
+
+		case 3: cout << "What's the length of the triangle's base? ";
+			double base, height, areat;
+			cin >> base;
+			cout << "What's the height of the triangle? ";
+			cin >> height;
+			areat = base * height * .5;
+			cout << "The area of the triangle is " << areat;
+			break;
+
+		case 4: cout << "Quitting Program";
+			break;
+
+		default: cout << "You did not enter a number in the range of 1-4. "
+						 "Please try again and enter a number in the range of 1 - 4.";
+			
+	}
 
 } 
 
