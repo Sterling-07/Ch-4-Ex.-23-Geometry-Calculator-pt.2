@@ -1,8 +1,11 @@
 /* File Name: Chapter 4 - Geometry Calculator 
 * Programmer: Philip Rodgers
 * Date: September 2025
-* Requirements: 
+* Requirements: Create a program that prompts the user to pick from a menu based off whatever calculation they want to do, 
+* and redirects them to their selcted calculation program which enables them to perform the necessary calculations in order
+* to complete the problem.
 */
+
 #include <iostream>
 #include <iomanip>
 
@@ -10,8 +13,10 @@ using namespace std;
 
 int main()
 {
+	// Create the variable choice in order to save the choice the user picks from the menu
 	int choice;
 
+		// Create the menu and save whatever choice the user picks
 		cout << "Geometry Calculator" << endl;
 		cout << setw(36) << "1. Calculate the Area of a Circle" << endl;
 		cout << setw(39) << "2. Calculate the Area of a Rectangle" << endl;
@@ -20,6 +25,8 @@ int main()
 		cout << setw(26) << "Enter you choice (1-4):" << endl;
 		cin >> choice;
 	
+	// Use the switch statement to allow the user to be redirected to their case number based 
+	// off what they selected in the menu up top
 	switch (choice)
 	{
 		case 1: cout << "What's the radius of the circle? ";
@@ -68,11 +75,11 @@ int main()
 			}
 			break;
 
-		case 4: cout << "Quitting Program";
+		case 4: cout << "Quitting Program\n";
 			break;
 
 		default: cout << "You did not enter a number in the range of 1-4. "
-						 "Please try again and enter a number in the range of 1 - 4.";
+						 "Please try again and enter a number in the range of 1 - 4.\n";
 
 	}
 
