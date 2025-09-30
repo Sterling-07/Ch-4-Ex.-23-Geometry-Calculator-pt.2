@@ -25,8 +25,15 @@ int main()
 		case 1: cout << "What's the radius of the circle? ";
 			double radius, areac;
 			cin >> radius;
-			areac = 3.14159 * (pow(radius, 2.0));
-			cout << "The radius of the circle is " << areac;
+			if (radius > 0)
+			{
+				areac = 3.14159 * (pow(radius, 2.0));
+				cout << "The radius of the circle is " << areac << endl;
+			}
+			else
+			{
+				cout << "Please enter a positive number for the radius.\n";
+			}
 			break;
 
 		case 2: cout << "What's the length of the rectangle? ";
@@ -34,8 +41,15 @@ int main()
 			cin >> length;
 			cout << "What's the width of the rectangle? ";
 			cin >> width;
-			arear = length * width;
-			cout << "The area of the rectangle is " << arear;
+			if (length > 0 && width > 0)
+			{
+				arear = length * width;
+				cout << "The area of the rectangle is " << arear << endl;
+			}
+			else
+			{
+				cout << "Please enter a positive number for both the length and width.\n";
+			}
 			break;
 
 		case 3: cout << "What's the length of the triangle's base? ";
@@ -43,8 +57,15 @@ int main()
 			cin >> base;
 			cout << "What's the height of the triangle? ";
 			cin >> height;
-			areat = base * height * .5;
-			cout << "The area of the triangle is " << areat;
+			if (base > 0 && height > 0)
+			{
+				areat = base * height * .5;
+				cout << "The area of the triangle is " << areat << endl;
+			}
+			else 
+			{
+				cout << "Please enter a positive number for both the base and height.\n";
+			}
 			break;
 
 		case 4: cout << "Quitting Program";
@@ -52,7 +73,7 @@ int main()
 
 		default: cout << "You did not enter a number in the range of 1-4. "
 						 "Please try again and enter a number in the range of 1 - 4.";
-			
+
 	}
 
 } 
